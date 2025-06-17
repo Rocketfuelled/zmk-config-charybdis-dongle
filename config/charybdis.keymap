@@ -38,6 +38,32 @@
 
 / {
     behaviors {
+        hl: homewrow_mods_left {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HOMEROW_MODS_LEFT_HAND";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <240>;
+            quick-tap-ms = <150>;
+            hold-trigger-on-release;
+            hold-trigger-key-positions = <5 25 15 33 34 26 16 17 28 18 27 29 19 8 9 7 6>;
+        };
+
+        hr: homewrow_mods_right {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HOMEROW_MODS_RIGHT_HAND";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <240>;
+            quick-tap-ms = <150>;
+            hold-trigger-on-release;
+            hold-trigger-key-positions = <0 10 20 22 21 11 2 1 12 13 3 4 14 24 30 23 31 32>;
+        };
+
         u_mt: u_mt {
             compatible = "zmk,behavior-hold-tap";
             label = "u_mt";
